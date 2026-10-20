@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+:root{--navy:#142846;
+    --navy2:#203c60;
+    --ink:#1d2b3d;
+    --muted:#758195;
+    --line:#e5e9ef;
+    --paper:#f6f8fb;
+    --white:#fff;
+    --gold:#d6b77b;
+    --green:#2f8067
+}
+*{
+    box-sizing:border-box
+}
+body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'DM Sans',Arial,sans-serif;
+    min-height:100vh
+}
+.page{max-width:1020px;
+    margin:0 auto;
+    padding:44px 30px 28px
+}
+.top{
+    display:flex;
+    align-items:center;
+    gap:17px;
+    padding-bottom:28px;
+    border-bottom:1px solid var(--line)
+}
+.brand-mark{
+    width:54px;
+    height:54px;
+    border-radius:16px;
+    background:var(--navy);
+    color:#fff;
+    display:grid;
+    place-items:center;
+    font-family:'Playfair Display',serif;font-size:31px;
+    box-shadow:0 8px 20px #14284622
+}
+.eyebrow{
+    font-size:10px;
+    letter-spacing:2px;
+    font-weight:700;
+    color:#9a8154;
+    margin:0 0 7px
+}
+h1,h2,h3,p{
+    margin-top:0
+}
+h1{
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:30px;
+    margin:0;
+    color:var(--navy)
+}
+.subtitle{
+    font-size:13px;
+    color:var(--muted);
+    margin:4px 0 0
+}
+.status-pill{
+    margin-left:auto;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:30px;
+    padding:9px 13px;
+    color:#667286;font-size:11px
+}
+.status-dot{
+    width:7px;
+    height:7px;
+    background:var(--green);
+    border-radius:50%
+}
+.intro{
+    margin:28px 0 20px;
+    padding:29px 30px;
+    background:var(--navy);
+    border-radius:20px;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+    box-shadow:0 14px 32px #14284618
+}
+.intro .eyebrow{
+    color:var(--gold)
+}
+.intro h2{
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:25px;
+    font-weight:600;
+    margin:0 0 8px
+}
+.intro p:not(.eyebrow){
+    color:#d2dbe7;
+    font-size:13px;
+    margin:0;
+    line-height:1.6
+}
+button{
+    border:0;
+    border-radius:11px;
+    padding:14px 18px;
+    background:var(--gold);
+    color:var(--navy);
+    font-family:inherit;
+    font-size:13px;
+    font-weight:700;
+    white-space:nowrap;
+    cursor:pointer;
+    transition:transform .15s,background .15s
+}
+button:hover{
+    background:#e6cb95;
+    transform:translateY(-1px)
+}
+button:disabled{
+    opacity:.65;
+    cursor:wait;
+    transform:none
+}
+button span{
+    padding-left:10px;
+    font-size:17px
+}
+.message{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:14px 17px;color:#637084;
+    font-size:13px;margin-bottom:18px
+}
+.message.success{
+    border-color:#cfe7dd;
+    background:#f4fbf8;
+    color:#276d56
+}
+.message.error{
+    border-color:#f0d1d1;
+    background:#fff7f7;
+    color:#a13e3e
+}
+.metrics{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;margin-bottom:33px
+}
+.metric{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:15px;padding:19px 21px;
+    display:flex;
+    flex-direction:column;
+    min-height:122px
+}
+.metric-label{
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:1.5px;
+    color:#8993a3
+}
+.metric strong{
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:31px;
+    color:var(--navy);
+    margin:7px 0 2px
+}
+.metric-note{
+    font-size:11px;
+    color:#929bab
+}
+.section-heading{
+    display:flex;
+    align-items:end;
+    justify-content:space-between;
+    margin-bottom:15px
+}
+.section-heading h2{
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:23px;
+    color:var(--navy);
+    margin:0
+}
+.count{
+    font-size:11px;
+    color:var(--muted);
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:7px 11px
+}
+.items{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px
+}
+.item-card,.empty-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:15px;
+    padding:20px;
+    min-height:150px
+}
+.item-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center
+}
+.item-icon{
+    width:38px;
+    height:38px;
+    border-radius:12px;
+    background:#edf1f7;
+    color:var(--navy);
+    display:grid;
+    place-items:center;
+    font-size:19px
+}
+.item-tag{
+    font-size:10px;
+    letter-spacing:1px;
+    color:#8b95a5
+}
+.item-name{
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:21px;
+    text-transform:capitalize;
+    margin:16px 0 3px;
+    color:var(--navy)
+}
+.item-bottom{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between
+}
+.item-price{
+    font-weight:700;
+    font-size:17px;
+    color:var(--navy)
+}
+.item-caption{
+    font-size:10px;
+    color:#9aa3b1
+}
+.empty-card{
+    grid-column:1/-1;
+    text-align:center;
+    padding:29px 15px
+}
+.empty-icon{
+    font-size:23px;
+    color:#b7a071;
+    margin-bottom:7px
+}
+.empty-card h3{
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:19px;
+    color:var(--navy);
+    margin-bottom:6px
+}
+.empty-card p{
+    font-size:12px;
+    color:var(--muted);
+    margin:0
+}
+footer{
+    display:flex;
+    justify-content:space-between;
+    border-top:1px solid var(--line);
+    margin-top:30px;
+    padding-top:17px;
+    font-size:10px;
+    letter-spacing:1px;
+    color:#9aa3b1
+}
+footer span:first-child{
+    font-weight:700;
+    color:var(--navy)
+}
+@media(max-width:650px){
+    .page{padding:25px 16px}
+    .top{gap:12px}
+    .status-pill{display:none}
+    .intro{
+        align-items:flex-start;
+        flex-direction:column;
+        padding:23px}
+        .intro button{
+            width:100%
+        }
+        .metrics{
+            gap:8px
+        }
+        .metric{
+            padding:14px 12px;
+            min-height:112px
+        }
+        .metric strong{
+            font-size:25px
+        }
+        .metric-note{
+            font-size:10px
+        }
+        .items{
+            grid-template-columns:1fr
+        }
+        .item-card{
+            min-height:130px
+        }
+        .item-name{
+            margin-top:12px}}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookshop | The Shelf</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <header class="top">
+      <div class="brand-mark" aria-hidden="true">B</div>
+      <div>
+        <p class="eyebrow">PROJECT 0 · THE SHELF</p>
+        <h1>Bookshop</h1>
+        <p class="subtitle">A small shelf of everyday essentials.</p>
+      </div>
+      <span class="status-pill"><span class="status-dot"></span> Ready to load</span>
+    </header>
+
+    <section class="intro">
+      <div>
+        <p class="eyebrow">TODAY'S SHELF</p>
+        <h2>Simple things, fair prices.</h2>
+        <p>Load the shelf to ask the server for the current items and prices.</p>
+      </div>
+      <button id="loadButton" type="button">Load shelf <span aria-hidden="true">→</span></button>
+    </section>
+
+    <section class="message" id="message" role="status" aria-live="polite">The shelf is waiting. Select “Load shelf” to begin.</section>
+
+    <section class="metrics" aria-label="Shelf summary">
+      <article class="metric"><span class="metric-label">LOADED</span><strong id="loaded">0</strong><span class="metric-note">items on the shelf</span></article>
+      <article class="metric"><span class="metric-label">DEAREST</span><strong id="dearest">0</strong><span class="metric-note">highest price</span></article>
+      <article class="metric"><span class="metric-label">SUM</span><strong id="sum">0</strong><span class="metric-note">total shelf value</span></article>
+    </section>
+
+    <section class="shelf-section">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE COLLECTION</p><h2>Shelf items</h2></div>
+        <span class="count" id="itemCount">0 items</span>
+      </div>
+      <div class="items" id="items">
+        <article class="empty-card"><div class="empty-icon">✦</div><h3>Your shelf is empty</h3><p>Load the shelf to see the items here.</p></article>
+      </div>
+    </section>
+    <footer><span>BOOKSHOP</span><span>Lab 06 · A page that waits</span></footer>
+  </main>
+</body>
+</html>
